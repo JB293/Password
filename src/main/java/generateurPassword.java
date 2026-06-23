@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Classe responsable de la génération de mot de passe sécurisés
  */
-public class Generateur_mot_de_passe {
+public class generateurPassword {
 
     // Groupe de caractères définis de manière immuable
 
