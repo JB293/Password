@@ -6,7 +6,7 @@ public class ValidateurDocker {
 
     public String evaluerRobustesse(String password) {
         try {
-            // Le score est calcule dans Docker pour garder la validation separee du code Java.
+            // Le score est calculé dans Docker pour garder la validation séparée du code Java.
             ProcessBuilder processBuilder = new ProcessBuilder(
                 "docker", "run", "--rm", "password-validator", password
             );
