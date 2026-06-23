@@ -19,7 +19,7 @@ public class Main {
 
             // Boucle de configuration des critères
             while (true) {
-                longueur = lireEntier(sc, "Entrez la longueur du mot de passe (min 8): ", 1);
+                longueur = lireEntier(sc, "Entrez la longueur du mot de passe (min 8): ", 8);
 
                 inclureMinuscule = demanderOption(sc, "Inclure des minuscules (abcd)");
                 inclureMajuscule = demanderOption(sc, "Inclure des majuscules (ABCD)");
@@ -85,14 +85,14 @@ public class Main {
     // Méthode de validation des options oui/non
     private static boolean demanderOption(Scanner sc, String message) {
         while (true) {
-            System.out.print(message + " (o/n) : ");
+            System.out.print(message + " (oui/non) : ");
             String reponse = sc.next().trim().toLowerCase();
-            if (reponse.equals("o") || reponse.equals("oui")) {
+            if (reponse.equals("oui") || reponse.equals("o")) {
                 return true;
-            } else if (reponse.equals("n") || reponse.equals("non")) {
+            } else if (reponse.equals("non") || reponse.equals("n")) {
                 return false;
             }
-            System.out.println("Réponse invalide. Tapez 'o' ou 'n'.");
+            System.out.println("Réponse invalide. Tapez 'oui' ou 'non'.");
         }
     }
 }
