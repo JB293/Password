@@ -19,8 +19,8 @@ public class generateurPassword {
     private final SecureRandom random = new SecureRandom();
 
     public String generate(int length, boolean lowercase, boolean uppercase, boolean numbers, boolean symbols) {
-        if (length < 1){
-            throw new IllegalArgumentException("La longueur du mot de passe doit être d'au moins 1 caractère");
+        if (length < 8){
+            throw new IllegalArgumentException("La longueur du mot de passe doit être d'au moins 8 caractère");
         }
         StringBuilder poolDeCaracteres = new StringBuilder();
 
